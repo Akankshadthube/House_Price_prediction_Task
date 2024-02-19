@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" type="text/css" href='/static/style.css'>
+    <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Website Title -->
+
+    <div class="container">
+            <h2 class='container-heading'><span class="heading_font">House Price Prediction</span></h2>
+        <div class='description'>
+            <p>A Machine Learning Web Application that House Price Prediction, Built with Flask.</p><br>
+        </div>
+    </div>
+
+    <!-- Text Area -->
+    <div class="ml-container">
+        <form action="{{ url_for('predict')}}" method="POST">
+
+
+        <label for="Area<">Area</label>
+        <select id="Area<" name="Area">
+          <option selected>----select option----</option>
+          <option value="0">7420</option>
+          <option value="1">8960</option>
+          <option value="2">9960</option>
+          <option value="3">7500</option>
+          <option value="4">7420</option>
+          <option value="5">3000</option>
+          <option value="6">2400</option>
+          <option value="7">3620</option>
+          <option value="9">2910</option>
+          <option value="9">3850</option>
+          <option value="9">3550</option>
+        </select><br>
+
+        <label for="Bedrooms">Bedrooms</label>
+        <select id="Bedrooms" name="Bedrooms">
+          <option selected>----select option----</option>
+          <option value="0">1</option>
+          <option value="1">2</option>
+          <option value="2">3</option>
+          <option value="3">4</option>
+        </select><br>
+
+        <label for="Bathrooms">Bathrooms</label>
+        <select id="Bathrooms" name="Bathrooms">
+          <option selected>----select option----</option>
+          <option value="0">1</option>
+          <option value="1">2</option>
+          <option value="2">3</option>
+          <option value="3">4</option>
+        </select><br>
+
+        <label for="Stories">Stories</label>
+        <select id="Stories" name="Stories">
+          <option selected>----select option----</option>
+          <option value="0">1</option>
+          <option value="1">2</option>
+          <option value="2">3</option>
+        </select><br>
+
+        <label for="Mainroad">Mainroad</label>
+        <select id="Mainroad" name="Mainroad">
+          <option selected>----select option----</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+        </select><br>
+
+        <label for="Guestroom">Guestroom</label>
+        <select id="Guestroom" name="Guestroom">
+           <option selected>----select option----</option>
+           <option value="0">0</option>
+           <option value="1">1</option>
+        </select><br>
+        <label for="Basement">Basement</label>
+        <select id="Basement" name="Basement">
+           <option selected>----select option----</option>
+           <option value="0">0</option>
+           <option value="1">1</option>
+
+        </select><br>
+
+        <label for="Hotwaterheating">Hotwaterheating</label>
+        <select id="Hotwaterheating" name="Hotwaterheating">
+             <option selected>----select option----</option>
+             <option value="0">0</option>
+             <option value="1">1</option> 
+        </select><br>
+
+        <label for="AirConditioning">AirConditioning</label>
+        <select id="AirConditioning" name="AirConditioning">
+            <option selected>----select option----</option>
+            <option value="0">0</option>
+            <option value="1">1</option> 
+        </select><br>
+
+
+        <label for="Parking">Parking</label>
+        <select id="Parking" name="Parking">
+            <option selected>----select option----</option>
+            <option value="0">0</option>
+            <option value="1">1</option> 
+            <option value="3">2</option>  
+        </select><br>
+
+        <label for="Prefarea">Prefarea</label>
+        <select id="Prefarea" name="Prefarea">
+            <option selected>----select option----</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+        </select><br>
+
+        <label for="furnishingstatus">furnishingstatus</label>
+        <select id="furnishingstatus" name="furnishingstatus">
+            <option selected>----select option----</option>
+            <option value="0">0</option>
+            <option value="1">1</option> 
+            <option value="3">2</option>  
+        </select><br>
+        
+        
+    <input type="submit" class="my-cta-button" value="Predict">
+    </form>
+      {% if prediction %}
+    <h3> {{prediction}}</h3>
+
+    {% endif  %}
+    </div>
+     <!-- Footer -->
+    <div class='footer'>
+        <p class='footer-description'>Made By AkankshaThube</p>
+    </div>
+
+</body>
+</html>
+
